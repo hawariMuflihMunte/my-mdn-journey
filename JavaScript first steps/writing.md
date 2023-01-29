@@ -85,3 +85,17 @@ Pada kode diatas, kita mengambil sebuah teks paragraf (line 1), kemudian
 menjalankan `event listener` (line 3) sehingga ketika paragraf diklik, fungsi `updateName()` (line 5 - 8) dijalankan. Blok kode `updateName()` menanyakan user sebuah nama baru, kemudian memasukkannya ke dalam paragraf untuk memperbarui nama di dalamnya sesuai yang kita masukkan.
 <br/>
 <br/>
+Jika kamu menukar urutan dari dua baris pertama kode diatas, kode tersebut akan tidak dapat bekerja lagi sebagaimana mestinya -- yang kamu dapat adalah error yang ditampilkan pada _browser developer console_ -- `TypeError: playerBox is undefined`.
+
+--
+
+### # Interpreted versus compiled code
+#### _Kode yang diterjemahkan dengan kode yang dikompilasi_
+
+_Interpret_ (Diterjemahkan) dan _Compiled_ (Dikompilasi). _**Di bahasa pemrograman yang diterjemahkan, code dijalankan dari atas ke bawah dan hasil eksekusi langsung di kembalikan**_. Kode tidak perlu diubah menjadi kode lainnya dan kode ini pun akan berjalan langsung pada lingkungan eksekusinya (disini, kasusnya adalah web browser).
+<br/>
+<br/>
+Sedangkan kode yang dikompilasi, _**kode ini perlu diubah ke dalam bentuk lainnya sebelum dapat dijalankan oleh komputer**_. Seperti contohnya dalam bahasa program C/C++, dimana kode ini dikompilasikan dan diubah ke dalam bentuk kode mesin (format biner) kemudian mesin dapat menjalankan kode ini.
+<br/>
+<br/>
+JavaScript dikompilasikan dengan cepat ke dalam bentuk kode mesin sehingga kode ini dapat berjalan tanpa perlu proses kompilasi dikarenakan ia sudah otomatis dikompilasikan (diterjemahkan) oleh lingkungan eksekusinya (environment).
