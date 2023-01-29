@@ -99,3 +99,28 @@ Sedangkan kode yang dikompilasi, _**kode ini perlu diubah ke dalam bentuk lainny
 <br/>
 <br/>
 JavaScript dikompilasikan dengan cepat ke dalam bentuk kode mesin sehingga kode ini dapat berjalan tanpa perlu proses kompilasi dikarenakan ia sudah otomatis dikompilasikan (diterjemahkan) oleh lingkungan eksekusinya (environment).
+
+---
+
+### # Server-side versus client-side code
+#### kode server dengan pengguna
+
+_**Kode pengguna berjalan pada perangkat pengguna**_, sedangkan _**kode server berjalan di server dan data yang ada di server akan diunduh/diambil oleh client (pengguna) dan hasilnya akan ditampilkan di perangkat pengguna**_.
+<br/>
+<br/>
+Adapun bahasa pemrograman yang populer digunakan untuk web server adalah PHP, Python, Ruby, ASP.NET dan JavaScript.
+
+---
+
+### # Dynamic versus static code
+#### Kode dinamis dengan statis
+
+_**Dinamis yang artinya konten dapat berubah sesuai dengan kebutuhan dan informasi yang ada di dalamnya pula dapat diubah dan disesuaikan dengan kebutuhan**_. Contoh:<br/>
+* Client-side
+    * Mengubah data atau tampilan pada halaman,
+    * Menambah, menghapus, mengubah data/ atau tampilan,
+    * dan lain sebagainya.
+* Server-side
+    * Mengambil data dari database,
+    * Mengambil data dari 3rd-party API,
+    * dan lain sebagainya.
