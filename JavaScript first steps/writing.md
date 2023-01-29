@@ -42,3 +42,14 @@ Dengan begitu, kita dapat membuat program dari JavaScript dengan memanfaatkan **
     * `Google Maps API`,
     * `openStreetMap API`,
     * Dan lain-lain.
+
+---
+
+### # What is JavaScript doing on your page?
+#### _Apa yang dilakukan JavaScript pada halaman webmu_
+
+Ketika kamu menjalankan sebuah halaman web pada web browser, kamu menjalankannya (HTML, CSS, JS) di dalam sebuah lingkungan eksekusi (tab browser). Ia bekerja layaknya sebuah pabrik yang menerima baha mentah (disini bisa kita umpamakan dengan kode) dan menampilkan produk hasil olahannya (halaman web).
+<br/>
+Penggunaan umum dari JavaScript adalah memodifikasi konten HTML dan CSS secara dinamis untuk update tampilannya, dengan menggunakan `DOM API`.
+<br/>
+Dapat terjadi error apabila JavaScript dijalankan terlebih dahulu dibanding HTML dan CSS jika kita ingin menerapkan metode diatas. Sebaiknya kode JavaScript dijalankan apabila HTML dan CSS sudah selesai dijalankan terlebih dahulu.
