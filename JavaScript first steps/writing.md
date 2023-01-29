@@ -27,7 +27,9 @@ Inti dari JavaScript terdiri dari fitur bahasa pemrograman pada umumnya yang dap
 
 Yang lebih menariknya, JavaScript memberikan fungsionalitas bawaan (_built-in functionality_) pada sisi client (sederhananya, sisi user atau pengguna). **Application Programming Interfaces (APIs)** -- jika diartikan _Antarmuka Pemrograman Aplikasi_ -- sederhananya, **API** adalah antarmuka dalam suatu program yang dapat berinteraksi dengan program lainnya melalui **API**.
 <br/>
+<br/>
 Dengan begitu, kita dapat membuat program dari JavaScript dengan memanfaatkan **API** tanpa perlu tersambung ke server yang menyediakan **API** tersebut.
+<br/>
 <br/>
 **API** pada JavaScript dapat dibagi ke dalam dua kategori.
 1. **Browser API**<br/>
@@ -50,6 +52,36 @@ Dengan begitu, kita dapat membuat program dari JavaScript dengan memanfaatkan **
 
 Ketika kamu menjalankan sebuah halaman web pada web browser, kamu menjalankannya (HTML, CSS, JS) di dalam sebuah lingkungan eksekusi (tab browser). Ia bekerja layaknya sebuah pabrik yang menerima baha mentah (disini bisa kita umpamakan dengan kode) dan menampilkan produk hasil olahannya (halaman web).
 <br/>
+<br/>
 Penggunaan umum dari JavaScript adalah memodifikasi konten HTML dan CSS secara dinamis untuk update tampilannya, dengan menggunakan `DOM API`.
 <br/>
+<br/>
 Dapat terjadi error apabila JavaScript dijalankan terlebih dahulu dibanding HTML dan CSS jika kita ingin menerapkan metode diatas. Sebaiknya kode JavaScript dijalankan apabila HTML dan CSS sudah selesai dijalankan terlebih dahulu.
+
+---
+
+### # Browser security
+#### _Keamanan browser_
+
+Masing-masing tab browser memiliki ruang lingkup eksekusi yang berbeda (_lingkungan eksekusi / **execution environments**_) -- Dengan begitu, masing-masing kode dijalankan secara terpisah dan code pada suatu tab tidak dapat mempengaruhi kode pada tab browser lainnya -- atau pada website lainnya. Ini merupakan implementasi keamanan -- jika ini tidak diterapkan, maka bisa dipastikan orang lain (hacker dan sejenisnya) dapat menuliskan kode yang berbahaya dan mulai mencuri informasi-informasi dari website lainnya dan hal-hal yang lainnya yang dapat menguntungkan sepihak saja.
+
+---
+
+### # JavaScript running order
+#### _Urutan eksekusi JavaScript_
+
+```
+const playerBox = document.querySelector('p');
+
+playerBox.addEventListener('click', () => {
+    const name = prompt('Enter a new name');
+    playerBox.textContent = `Player 1: ${name}`;
+});
+```
+
+> Kode diatas merupakan kode pada tombol dibawah (Player 1: Guest)
+
+Pada kode diatas, kita mengambil sebuah teks paragraf (line 1), kemudian
+menjalankan `event listener` (line 3) sehingga ketika paragraf diklik, fungsi `updateName()` (line 5 - 8) dijalankan. Blok kode `updateName()` menanyakan user sebuah nama baru, kemudian memasukkannya ke dalam paragraf untuk memperbarui nama di dalamnya sesuai yang kita masukkan.
+<br/>
+<br/>
