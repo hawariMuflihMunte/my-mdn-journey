@@ -50,7 +50,7 @@ Dengan begitu, kita dapat membuat program dari JavaScript dengan memanfaatkan **
 ### # What is JavaScript doing on your page?
 #### _Apa yang dilakukan JavaScript pada halaman webmu_
 
-Ketika kamu menjalankan sebuah halaman web pada web browser, kamu menjalankannya (HTML, CSS, JS) di dalam sebuah lingkungan eksekusi (tab browser). Ia bekerja layaknya sebuah pabrik yang menerima baha mentah (disini bisa kita umpamakan dengan kode) dan menampilkan produk hasil olahannya (halaman web).
+Ketika kamu menjalankan sebuah halaman web pada web browser, kamu menjalankannya (HTML, CSS, JS) di dalam sebuah lingkungan eksekusi (tab browser). Ia bekerja layaknya sebuah pabrik yang menerima bahan mentah (disini bisa kita umpamakan dengan kode) dan menampilkan produk hasil olahannya (halaman web).
 <br/>
 <br/>
 Penggunaan umum dari JavaScript adalah memodifikasi konten HTML dan CSS secara dinamis untuk update tampilannya, dengan menggunakan `DOM API`.
@@ -60,14 +60,14 @@ Dapat terjadi error apabila JavaScript dijalankan terlebih dahulu dibanding HTML
 
 ---
 
-### # Browser security
+#### # Browser security
 #### _Keamanan browser_
 
 Masing-masing tab browser memiliki ruang lingkup eksekusi yang berbeda (_lingkungan eksekusi / **execution environments**_) -- Dengan begitu, masing-masing kode dijalankan secara terpisah dan code pada suatu tab tidak dapat mempengaruhi kode pada tab browser lainnya -- atau pada website lainnya. Ini merupakan implementasi keamanan -- jika ini tidak diterapkan, maka bisa dipastikan orang lain (hacker dan sejenisnya) dapat menuliskan kode yang berbahaya dan mulai mencuri informasi-informasi dari website lainnya dan hal-hal yang lainnya yang dapat menguntungkan sepihak saja.
 
 ---
 
-### # JavaScript running order
+#### # JavaScript running order
 #### _Urutan eksekusi JavaScript_
 
 ```
@@ -89,7 +89,7 @@ Jika kamu menukar urutan dari dua baris pertama kode diatas, kode tersebut akan 
 
 --
 
-### # Interpreted versus compiled code
+#### # Interpreted versus compiled code
 #### _Kode yang diterjemahkan dengan kode yang dikompilasi_
 
 _Interpret_ (Diterjemahkan) dan _Compiled_ (Dikompilasi). _**Di bahasa pemrograman yang diterjemahkan, code dijalankan dari atas ke bawah dan hasil eksekusi langsung di kembalikan**_. Kode tidak perlu diubah menjadi kode lainnya dan kode ini pun akan berjalan langsung pada lingkungan eksekusinya (disini, kasusnya adalah web browser).
@@ -102,7 +102,7 @@ JavaScript dikompilasikan dengan cepat ke dalam bentuk kode mesin sehingga kode 
 
 ---
 
-### # Server-side versus client-side code
+#### # Server-side versus client-side code
 #### kode server dengan pengguna
 
 _**Kode pengguna berjalan pada perangkat pengguna**_, sedangkan _**kode server berjalan di server dan data yang ada di server akan diunduh/diambil oleh client (pengguna) dan hasilnya akan ditampilkan di perangkat pengguna**_.
@@ -112,15 +112,73 @@ Adapun bahasa pemrograman yang populer digunakan untuk web server adalah PHP, Py
 
 ---
 
-### # Dynamic versus static code
+#### # Dynamic versus static code
 #### Kode dinamis dengan statis
 
 _**Dinamis yang artinya konten dapat berubah sesuai dengan kebutuhan dan informasi yang ada di dalamnya pula dapat diubah dan disesuaikan dengan kebutuhan**_. Contoh:<br/>
 * Client-side
     * Mengubah data atau tampilan pada halaman,
-    * Menambah, menghapus, mengubah data/ atau tampilan,
+    * Menambah, menghapus, mengubah data atau tampilan,
     * dan lain sebagainya.
 * Server-side
     * Mengambil data dari database,
     * Mengambil data dari 3rd-party API,
     * dan lain sebagainya.
+
+Sedangkan _**statis hanya menampilkan konten yang sama tanpa ada perubahan sedikit pun**_.
+
+---
+
+### # How do you add JavaScript to your page?
+#### _Bagaimana caranya untuk menambahkan kode JavaScript ke halaman web?_
+
+#### Internal
+
+```
+<head>
+    ...
+
+    <script>
+        // JavaScript goes here
+    </script>
+</head>
+```
+
+#### External
+
+```
+<head>
+    ...
+
+    <script src="script.js" defer></script>
+</head>
+```
+
+Atau
+
+```
+<head>
+    ...
+</head>
+<body>
+    ...
+
+    <script src="script.js"></script>
+</body>
+```
+
+#### Inline JavaScript handlers
+
+```
+function createParagraph() {
+    const para = document.createElement('p');
+    para.textContent = 'You clicked the button!';
+    document.body.appendChild(para);
+}
+```
+
+```
+<button onclick="createParagraph()">Click me!</button>
+```
+
+> Cara diatas kurang efisien dan merupakan penerapan JavaScript yang kurang baik (_bad practice_).
