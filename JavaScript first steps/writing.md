@@ -225,7 +225,7 @@ Ada juga cara lama yang hingga saat ini masih populer digunakan, yaitu dengan ca
 
 #### `async` and `defer`
 
-* `async` dan `defer` merupakan fitur modern untuk mengunduh kode JavaScript dalam sesi yang berbeda dan hal ini tidak menyebabkan blokade pengunduhan konten HTML dan JavaScript.
+* `async` dan `defer` merupakan fitur modern untuk mengunduh kode JavaScript dalam sesi yang berbeda dan hal ini tidak menyebabkan blokade pengunduhan konten.
 * `async` akan dieksekusi segera setelah pengunduhan selesai. Hal ini menyebabkan blokade pengunduhan konten halaman dan tidak memberikan jaminan kode JavaScript akan segera dieksekusi.
 * `defer` akan diunduh sesuai dengan urutan dan kode akan dijalankan apabila semuanya telah selesai terunduh.
 * Jika kode JavaScript harus segera dijalankan dan kode ini tidak memiliki `dependencies` apapun, maka gunakan `async`.
