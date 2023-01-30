@@ -144,6 +144,8 @@ Sedangkan _**statis hanya menampilkan konten yang sama tanpa ada perubahan sedik
 </head>
 ```
 
+<br/>
+
 #### External
 
 ```
@@ -167,6 +169,8 @@ Atau
 </body>
 ```
 
+<br/>
+
 #### Inline JavaScript handlers
 
 ```
@@ -181,4 +185,38 @@ function createParagraph() {
 <button onclick="createParagraph()">Click me!</button>
 ```
 
-> Cara diatas kurang efisien dan merupakan penerapan JavaScript yang kurang baik (_bad practice_).
+> Cara diatas kurang efisien dan merupakan penerapan JavaScript yang kurang baik (_bad practice_).<br/>
+Dikarenakan apabila elemen HTML itu dibuat dalam jumlah yang banyak, pastinya akan melelahkan bila mengatur fungsi ini pada setiap elemen secara manual.
+
+<br/>
+
+#### Using addEventListener instead
+
+```
+const buttons = document.querySelectorAll('button');
+
+for (const button of buttons) {
+    button.addEventListener('click', createParagraph);
+}
+```
+Dengan kode diatas, setiap elemen `<button>` tidak perlu diatur lagi secara manual fungsi `createParagraph()`
+
+<br/>
+
+#### Script loading strategies
+#### Strategi memuat kode
+
+Jika kode JavaScript digunakan untuk memanipulasi konten HTML (`Document Object Model`), maka hal ini tidak dapat berlaku apabila kode JavaScript terlebih dahulu dieksekusi daripada kode HTML.
+
+Salah satu cara JavaScript modern dalam mengatasi hal ini adalah dengan menggunakan fitur `defer` sebagai atribut pada elemen `<script>` JavaScript external. Dengan begitu, kode HTML akan tetap diunduh setelah tag `<script>` tercapai.
+
+```
+<script src="script.js" defer></script>
+```
+Pada kode diatas, kode JavaScript dan HTML akan diunduh secara bersamaan dan kode JS akan dieksekusi apabila kode HTML telah selesai diunduh terlebih dahulu.
+
+> **Catatan:**<br/>
+    Dengan penggunaan atribut `defer`, kita tidak perlu menggunakan `DOMContentLoaded` karena atribut `defer` sudah mengatasi permasalahan tersebut.<br/>
+    Dan penggunaan atribut ini hanya berlaku untuk kode external JavaScript.
+
+Ada juga cara lama yang hingga saat ini masih populer digunakan, yaitu dengan cara meletakkan tag `<script>` sebelum tag penutup `</body>`. Permasalahan yang timbul dari cara lama ini adalah kode JavaScript tidak akan diunduh sebelum konten HTML DOM sudah benar-benar terunduh semuanya, sehingga hal ini menyebabkan kode JavaScript perlu diunduh dan dieksekusi dalam waktu yang lebih lama. Dalam kasus website-website yang berukuran besar, hal ini dapat menurunkan performa website.
