@@ -219,4 +219,19 @@ Pada kode diatas, kode JavaScript dan HTML akan diunduh secara bersamaan dan kod
     Dengan penggunaan atribut `defer`, kita tidak perlu menggunakan `DOMContentLoaded` karena atribut `defer` sudah mengatasi permasalahan tersebut.<br/>
     Dan penggunaan atribut ini hanya berlaku untuk kode external JavaScript.
 
-Ada juga cara lama yang hingga saat ini masih populer digunakan, yaitu dengan cara meletakkan tag `<script>` sebelum tag penutup `</body>`. Permasalahan yang timbul dari cara lama ini adalah kode JavaScript tidak akan diunduh sebelum konten HTML DOM sudah benar-benar terunduh semuanya, sehingga hal ini menyebabkan kode JavaScript perlu diunduh dan dieksekusi dalam waktu yang lebih lama. Dalam kasus website-website yang berukuran besar, hal ini dapat menurunkan performa website.
+Ada juga cara lama yang hingga saat ini masih populer digunakan, yaitu dengan cara meletakkan tag `<script>` sebelum tag `</body>`. Permasalahan yang timbul dari cara lama ini adalah kode JavaScript tidak akan diunduh sebelum konten HTML DOM sudah benar-benar terunduh semuanya, sehingga hal ini menyebabkan kode JavaScript perlu diunduh dan dieksekusi dalam waktu yang lebih lama. Dalam kasus website-website yang berukuran besar, hal ini dapat menurunkan performa website.
+
+<br/>
+
+#### `async` and `defer`
+
+* `async` dan `defer` merupakan fitur modern untuk mengunduh kode JavaScript dalam sesi yang berbeda dan hal ini tidak menyebabkan blokade pengunduhan konten HTML dan JavaScript.
+* `async` akan dieksekusi segera setelah pengunduhan selesai. Hal ini menyebabkan blokade pengunduhan konten halaman dan tidak memberikan jaminan kode JavaScript akan segera dieksekusi.
+* `defer` akan diunduh sesuai dengan urutan dan kode akan dijalankan apabila semuanya telah selesai terunduh.
+* Jika kode JavaScript harus segera dijalankan dan kode ini tidak memiliki `dependencies` apapun, maka gunakan `async`.
+* Jika kode JavaScript perlu untuk dijalankan setelah yang lainnya selesai diunduh terlebih dahulu dan bergantung pada kode lainnya, maka gunakan `defer`.
+
+---
+
+That's all 😄<br/>
+Have a nice day 🏝️<br/><br/>
