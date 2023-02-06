@@ -8,7 +8,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Hawari Muflih Munte">
 
-    <link rel="stylesheet" href="./script/style.css">
+    <style>
+        .form input[type="number"] {
+            width: 200px;
+        }
+
+        .lastResult {
+            color: white;
+            padding: 3px;
+        }
+    </style>
 
     <!-- UIkit CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.15.22/dist/css/uikit.min.css" />
@@ -46,13 +55,36 @@
 
         <div class="uk-container uk-margin-large-top">
             <hr>
-            
+            <h1>Number guessing game</h1>
+
+            <p>We have selected a random number between 1 and 100. See if you can guess it in 10 turns or fewer. We'll tell you if your guess was too high or too low.</p>
+
+            <div class="form">
+                <label for="guessField">Enter a guess: </label>
+                <input type="number" min="1" max="100" required id="guessField" class="guessField">
+                <input type="submit" value="Submit guess" class="guessSubmit">
+            </div>
+
+            <div class="resultParas">
+                <p class="guesses"></p>
+                <p class="lastResult"></p>
+                <p class="lowOrHi"></p>
+            </div>
         </div>
     </div>
 
     <script>
 
-        
+        let randomNum = Math.floor(Math.random() * 100) + 1;
+        const guesses = document.querySelector('.guesses');
+        const lastResult = document.querySelector('.lastResult');
+        const lowOrHi = document.querySelector('.lowOrHi');
+
+        const guessSubmit = document.querySelector('.guessSubmit');
+        const guessField = document.querySelector('.guessField');
+
+        let guessCount = 1;
+        let resetButton = 0;
 
     </script>
 </body>

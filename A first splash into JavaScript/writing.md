@@ -13,10 +13,6 @@ Salah satu hal yang sulit untuk dipelajari dalam pemrograman adalah bukan hanya 
 Berikut tautan contoh program:
 <a href="https://mdn.github.io/learning-area/javascript/introduction-to-js-1/first-splash/number-guessing-game-start.html">Number Guessing Game</a>
 
----
-
-#### Initial setup
-
 Bayangkan jika kita diminta untuk mengerjakan mini game seperti diatas oleh client kita:
 > Buatkan game sederhana berupa game tebak angka. Game ini harus memilih secara acak nomor dari 1 - 100. Kemudian pemain dapat menebak angka yang telah dipilih dengan batas 10 kali tebakan saja. Setelah menebak, akan muncul pesan kalau tebakannya salah atau benar, dan jika tebakannya salah, tampilkan pesan secara rinci apakah angka yang ditebak itu tinggi atau rendah dari angka yang harus ditebak. Kemudian angka yang sudah ditebak harus ditampilkan agar pemain dapat melihat tebakan mereka sebelumnya. Game akan langsung berhenti apabila pemain menebak angka dengan benar, atau pemain gagal menebak dalam 10 kali tebak. Jika game berakhir, berikan opsi kepada pemain untuk memainkan ulang game.
 
@@ -36,6 +32,14 @@ Dari pernyataan diatas, kita harus memecahnya ke dalam bentuk pernyataan yang le
  2. Pemain tidak dapat memasukkan angka tebakan lagi.
  3. Berikan opsi untuk bermain ulang.
 8. Jika game di mulai ulang, maka pastikan program untuk me-reset ulang programnya agar dapat dimainkan kembali.
+
+---
+
+#### Initial setup
+
+
+
+---
 
 #### Adding variables to store our data
 
