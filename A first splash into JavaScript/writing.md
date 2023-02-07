@@ -20,6 +20,7 @@ Dari pernyataan diatas, kita harus memecahnya ke dalam bentuk pernyataan yang le
 1. Cetak angka dari 1 sampai 100.
 2. Batas tebak angka 10 kali. Jadi, kegiatan menebak akan direkam dari 1 dan setiap pemain menebak akan bertambah 1.
 3. Pemain dapat memasukkan angka tebakannya.
+4. Lakukan pengecekan tebakan.
 5. Apabila benar, maka
  1. Tampilkan pesan kemenangan pemain.
  2. Berikan opsi untuk bermain ulang.
@@ -37,13 +38,68 @@ Dari pernyataan diatas, kita harus memecahnya ke dalam bentuk pernyataan yang le
 
 #### Initial setup
 
+Letakkan kode pada tag `<script>`
 
 
 ---
 
 #### Adding variables to store our data
 
+Kode di dalam `<script>`
+```javascript
+let randomNum = Math.floor(Math.random() * 100) + 1;
+
+const guesses = document.querySelector('.guesses');
+const lastResult = document.querySelector('.lastResult');
+const lowOrHi = document.querySelector('.lowOrHi');
+
+const guessSubmit = document.querySelector('.guessSubmit');
+const guessField = document.querySelector('.guessField');
+
+let guessCount = 1;
+let resetButton = 0;
+```
+ 
+Penjelasan:
+* `randomNum` merupakan kode untuk mencetak angka secara acak dan tersimpan pada variabel ini.
+* `guesses`, `lastResult`, `lowOrHi` merupakan kode yang digunakan dengan DOM API untuk memanipulasi konten HTML.
+```html
+<div class="resultParas">
+    <p class="guesses"></p>
+    <p class="lastResult"></p>
+    <p class="lowOrHi"></p>
+</div>
+```
+Ketiga variabel diatas akan memanipulasi konten HTML diatas dengan nama class yang sesuai.
+* `guessField` dan `guessSubmit` juga kode untuk memanipulasi konten HTML.
+```html
+<div class="form">
+    <label for="guessField">Enter a guess: </label>
+    <input type="number" min="1" max="100" required id="guessField" class="guessField">
+    <input type="submit" value="Submit guess" class="guessSubmit">
+</div>
+```
+* Terakhir, variabel `guessCount` dan `resetButton` digunakan untuk merekam dan menghitung jumlah tebakan pemain. Agar game dapat dimainkan ulang dan
+dapat dilakukan pengecekan apakah pemain sudah menebak 10 kali atau belum.
+
+---
+
 #### Functions
+
+```javascript
+function checkGuess() {
+    alert('I am placeholder');
+}
+```
+
+Lakukan pengecekan apakah fungsi diatas dapat berjalan dengan memanggil fungsinya:
+```javascript
+checkGuess();
+```
+
+Bila halaman menampilkan pesan `I am placeholder`, maka fungsi sudah dapat berjalan.
+
+---
 
 #### Operators
 
