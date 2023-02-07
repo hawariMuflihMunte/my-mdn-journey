@@ -206,6 +206,46 @@ console.log(name);
 
 #### Conditionals
 
+Tentu saja kita tidak ingin fungsi `checkGuess()` kita hanya menampilkan pesan `I am a placeholder` saja kan.
+Oleh karena itu, kita kita dapat melanjutkan mengisi blok fungsi kita dengan kode berikut
+```javascript
+function checkGuess() {
+    const userGuess = Number(guessField.value);
+
+    if (guessCount === 1) {
+        guesses.textContent += `${userGuess}`;
+    }
+
+    guesses.textContent += `${userGuess}`;
+
+    if (userGuess === randomNum) {
+        lastResult.textContent = 'Congratuliatons! You got it right!';
+        lastResult.style.backgroundColor = 'green';
+        lowOrHi.textContent = '';
+        setGameOver();
+    } else if (guessCount === 10) {
+        lastResult.textContent = '!!!GAME OVER!!!';
+        lowOrHi.textContent = '';
+        setGameOver();
+    } else {
+        lastResult.textContent = 'Wrong!';
+        lastResult.style.backgroundColor = 'red';
+
+        if (userGuess < randomNum) {
+            lowOrHi.textContent = 'Last guess was too low!';
+        } else if (userGuess > randomNum) {
+            lowOrHi.textContent = 'Last guess was too high!';
+        }
+    }
+
+    guessCount++;
+    guessField.value = '';
+    guessField.focus();
+}
+```
+
+---
+
 #### Events
 
 #### Finishing the game functionality
