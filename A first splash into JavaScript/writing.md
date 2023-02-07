@@ -250,7 +250,7 @@ Mari kita beda kode diatas:
 mana yang ingin kita jalankan dan tidak kita jalankan dengan menentukan syaratnya.
 Contohnya pada blok kondisional pertama, kita dapat melihat kode `guessCount === 1`. Blok ini mengevaluasi apakah nilai variabel
 `guessCount` bernilai 1 atau tidak. Jika ya, maka jalankan kode yang ada di dalam blok ini.
-
+* `userGuess` akan ditimpa di `guesses` sehingga pemain dapat melihat tebakan sebelumnya.
 ---
 
 #### Events
