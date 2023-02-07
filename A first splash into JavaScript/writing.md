@@ -38,7 +38,8 @@ Dari pernyataan diatas, kita harus memecahnya ke dalam bentuk pernyataan yang le
 
 #### Initial setup
 
-Letakkan kode pada tag `<script>`
+Letakkan kode pada tag `<script>` atau jika menulis kode JS secara terpisah, kita dapat memanggil tag `<script>` dengan atribut
+`src` dimana isi dari atribut ini adalah nama file kode JS eksternal.
 
 
 ---
@@ -102,6 +103,106 @@ Bila halaman menampilkan pesan `I am placeholder`, maka fungsi sudah dapat berja
 ---
 
 #### Operators
+
+###### 🎗 Operator Aritmatika
+
+<table>
+    <thead>
+        <tr>
+            <th>Operator</th>
+            <th>Name</th>
+            <th>Example</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><code>+</code></td>
+            <td>Addition</td>
+            <td><code>6 + 9</code></td>
+        </tr>
+        <tr>
+            <td><code>-</code></td>
+            <td>Subtraction</td>
+            <td><code>32 - 12</code></td>
+        </tr>
+        <tr>
+            <td><code>*</code></td>
+            <td>Multiplication</td>
+            <td><code>3 * 5</code></td>
+        </tr>
+        <tr>
+            <td><code>/</code></td>
+            <td>Division</td>
+            <td><code>10 / 4</code></td>
+        </tr>
+    </tbody>
+</table>
+
+Operator `+` juga dapat digunakan untuk menyambungkan string (disebut _concatenation_).
+```javascript
+const name = 'Bingo';
+console.log(name); // Bingo
+
+const hello = ' says hello!';
+console.log(hello); //   says hello!
+
+const greeting = name + hello;
+console.log(greeting); // Bingo says hello!
+```
+
+Atau dapat juga dilakukan dengan
+
+```javascript
+let name = 'Kyle';
+name += ' says hello!';
+console.log(name);
+```
+
+###### 🎗 Operator Perbandingan
+
+<table>
+    <thead>
+        <tr>
+            <th>Operator</th>
+            <th>Name</th>
+            <th>Example</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><code>===</code></td>
+            <td>Strict equality (is it exactly the same?)</td>
+            <td><pre>5 === 2 + 4 // false
+'Chris' === 'Bob' // false
+5 === 2 + 3 // true
+20 === '20' // false
+// Number versus string</pre></td>
+        </tr>
+        <tr>
+            <td><code>!==</code></td>
+            <td>Non-equality (is it not the same?)</td>
+            <td><pre>5 !== 2 + 4 // true
+'Chris' === 'Bob' // true
+5 === 2 + 3 // false
+20 === '20' // true
+// Number versus string</pre></td>
+        </tr>
+        <tr>
+            <td><code>&#60;</code></td>
+            <td>Less than</td>
+            <td><pre>7 &#60; 20 // true
+30 &#60; 12 // false</pre></td>
+        </tr>
+        <tr>
+            <td><code>&#62;</code></td>
+            <td>Strict equality (is it exactly the same?)</td>
+            <td><pre>7 &#62; 20 // false
+30 &#62; 12 // true</pre></td>
+        </tr>
+    </tbody>
+</table>
+
+---
 
 #### Conditionals
 
