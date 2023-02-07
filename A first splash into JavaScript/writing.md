@@ -251,6 +251,16 @@ mana yang ingin kita jalankan dan tidak kita jalankan dengan menentukan syaratny
 Contohnya pada blok kondisional pertama, kita dapat melihat kode `guessCount === 1`. Blok ini mengevaluasi apakah nilai variabel
 `guessCount` bernilai 1 atau tidak. Jika ya, maka jalankan kode yang ada di dalam blok ini.
 * `userGuess` akan ditimpa di `guesses` sehingga pemain dapat melihat tebakan sebelumnya.
+* Selanjutnya,
+ * `if () { }`. Cek apakah tebakan pemain benar atau salah. Jika benar, maka game akan menampilkan pesan kemenangan dengan background
+ berwarna hijau, hapus konten HTML lainnya agar pesan kemenangan dapat tampil, kemudian jalankan fungsi `setGameOver()`.
+ * `else if () { }`. Sama seperti blok kode diatas sebelumnya, blok ini merupakan kebalikannya. Jika pemain sudah menebak sebanyak 10 kali
+ dan belum menemukan jawaban yang benar, maka tampilkan pesan kekalahan dan jalankan fungsi `setGameOver()`.
+ * `else { }`. Blok kode ini yang akan berjalan apabila blok kondisional diatas sebelumnya (`if () { }` dan `else if () { }`) tidak terpenuhi syaratnya.
+ Blok kode ini akan melakukan perekaman tebakan pemain, menampilkan pesan apakah tebakan pemain terlalu rendah atau tinggi.
+* Yang terakhir, kode `guessCount` ditambah setiap pemain menebak dan `guessField.value = '';` mengosongkan konten HTML sehingga pemain dapat
+mengisi angka tebakannya tanpa tertimpa dengan angka tebakan sebelumnya.
+
 ---
 
 #### Events
