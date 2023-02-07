@@ -244,6 +244,13 @@ function checkGuess() {
 }
 ```
 
+Mari kita beda kode diatas:
+* Baris pertama mendeklarasikan sebuah variabel `userGuess` and nilainya di ambil dari tebakan (input) pemain.
+* Selanjutnya, ada blok kode kondisional atau percabangan. Dengan adanya percabangan, kita dapat memilih blok kode
+mana yang ingin kita jalankan dan tidak kita jalankan dengan menentukan syaratnya.
+Contohnya pada blok kondisional pertama, kita dapat melihat kode `guessCount === 1`. Blok ini mengevaluasi apakah nilai variabel
+`guessCount` bernilai 1 atau tidak. Jika ya, maka jalankan kode yang ada di dalam blok ini.
+
 ---
 
 #### Events
