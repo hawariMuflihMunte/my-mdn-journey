@@ -296,6 +296,33 @@ function setGameOver() {
 }
 ```
 
+* Dua baris pertama merupakan kode untuk menonaktifkan input form.
+* Selanjutnya, kita membuat sebuah elemen HTML baru dengan method `createElement(HTMLElementName)` dan mengatur isi konten teks nya dengan teks `Start new game`.
+* Yang terakhir, kita membuat sebuah _event listener_ pada `<button>` baru kita ketika diklik. Ketika tombol ini diklik, maka jalankan fungsi `resetGame()`.
+
+```javascript
+function resetGame() {
+    guessCount = 1;
+
+    const resetParas = document.querySelectorAll('.resultParas p');
+
+    for (const resetPara of resetParas) {
+        resetPara.textContent = '';
+    }
+
+    resetButton.parentNode.removeChild(resetButton);
+
+    guessField.disabled = false;
+    guessSubmit.disabled = false;
+    guessField.value = '';
+    guessField.focus();
+
+    lasResult.style.backgroundColor = 'white';
+
+    randomNum = Math.floor(Math.random() * 100) + 1;
+}
+```
+
 ---
 
 #### Loops
