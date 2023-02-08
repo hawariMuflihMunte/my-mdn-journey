@@ -267,9 +267,36 @@ mengisi angka tebakannya tanpa tertimpa dengan angka tebakan sebelumnya.
 
 Saat ini, kita sudah mengimplementasikan kode pada blok fungsi `checkGuess()`, namun fungsi ini tidak melakukan apapun dan kita tidak dapat melihat hasil jalannya kode ini dikarenakan kita belum memanggil nya. Idealnya, fungsi `checkGuess()` dijalankan ketika `"Submit guess"` diklik dan untuk melakukan ini kita memerlukan sebuah **event**.
 
+_Events_ adalah sesuatu yang dapat terjadi (berjalan) pada browser -- sebuah tombol di klik, halaman di muat, sebuah video dijalankan, dan lain sebagainya. -- sebagai respons dimana kita dapat menjalankan blok kode tertentu. **Event listeners** mengamati events secara spesifik dan memanggil **event handlers**, dimana kode ini dijalankan sebagai respons dari event yang dipicu.
+
+Berikut kode yang ditambahkan pada kode JS game sebelumnya:
+```javascript
+guessSubmit.addEventListener('click', checkGuess);
+```
+
+Disini, kode ini digunakan untuk menambah _event listener_ ke tombol `guessSubmit`. Method ini menerima dua buah nilai masukan (disebut _argument_) -- Tipe event yang kita dengarkan pada kasus game ini adalah `click` (sebagai string), dan kode yang ingin kita jalankan ketika tombol di `click` adalah fungsi `checkGuess()`.
+
+Selanjutnya, pengkodean fungsi `setGameOver()`.
+
 ---
 
 #### Finishing the game functionality
+
+```javascript
+function setGameOver() {
+    guessField.disabled = true;
+    guessSubmit.disabled = true;
+
+    resetButton = document.createElement('button');
+    resetButton.textContent = 'Start new game';
+
+    document.body.append(resetButton);
+
+    resetButton.addEventListener('click', resetGame);
+}
+```
+
+---
 
 #### Loops
 
