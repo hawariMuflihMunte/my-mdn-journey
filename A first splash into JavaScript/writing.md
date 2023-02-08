@@ -323,6 +323,14 @@ function resetGame() {
 }
 ```
 
+Kode diatas me-reset seluruh program kita dan memulai dari awal
+* Mengubah `guessCount` kembali ke 1
+* Mengosongkan semua informasi teks pada paragraf. Seluruh paragraf yang ada didalam `<div class="resultParas"></div>`, kemudian melakukan _looping_ dan mengatur `textContent` menjadi `''` (string kosong).
+* Menghilangkan tombol reset
+* Mengaktifkan kembali input form, mengosongkan teks sehingga game dapat dimainkan kembali
+* Menghilangkan warna background dari `lastResult`.
+* Cetak angka acak baru sehingga angka yang ditebak oleh pemain bukan hanya angka yang sudah ia tebak sebelumnya.
+
 ---
 
 #### Loops
