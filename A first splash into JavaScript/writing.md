@@ -265,6 +265,10 @@ mengisi angka tebakannya tanpa tertimpa dengan angka tebakan sebelumnya.
 
 #### Events
 
+Saat ini, kita sudah mengimplementasikan kode pada blok fungsi `checkGuess()`, namun fungsi ini tidak melakukan apapun dan kita tidak dapat melihat hasil jalannya kode ini dikarenakan kita belum memanggil nya. Idealnya, fungsi `checkGuess()` dijalankan ketika `"Submit guess"` diklik dan untuk melakukan ini kita memerlukan sebuah **event**.
+
+---
+
 #### Finishing the game functionality
 
 #### Loops
