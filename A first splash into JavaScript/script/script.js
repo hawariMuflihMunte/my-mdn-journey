@@ -73,7 +73,7 @@ function resetGame() {
     guessField.value = '';
     guessField.focus();
 
-    lasResult.style.backgroundColor = 'white';
+    lastResult.style.backgroundColor = 'white';
 
     randomNum = Math.floor(Math.random() * 100) + 1;
 }
