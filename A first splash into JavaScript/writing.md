@@ -335,6 +335,9 @@ Kode diatas me-reset seluruh program kita dan memulai dari awal
 
 #### Loops
 
+Loop merupakan konsep perulangan jalannya kode dengan syarat tertentu. Konsep ini merupakan konsep yang sangant penting dalam pemrograman, dengan adanya konsep ini, programmer dapat menjalankan suatu aksi tanpa harus menuliskan kodenya secara berulang yang dimana hal ini kurang efektif dan menguras tenaga dan pikiran bagi programmer.
+
+---
 #### A small discussion on objects
 
 #### Playing with browser objects
