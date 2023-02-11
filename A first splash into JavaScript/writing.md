@@ -355,7 +355,11 @@ cherries
 ---
 #### A small discussion on objects
 
+```javascript
+guessField.focus();
+```
 
+Dengan menambahkan method `focus()`, user akan langsung diarahkan kepada `<input>` segera setelah halaman selesai memuat konten. Dengan begitu, hal ini dapat meningkatkan _usability_ atau _cara pemakaian_ yang dapat membuat user paham dengan apa yang harus dilakukan dan bagaimana caranya berinteraksi dengan game yang dimainkannya.
 
 ---
 
