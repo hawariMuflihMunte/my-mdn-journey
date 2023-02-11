@@ -382,6 +382,17 @@ Variabel yang tidak memiliki referensi ke elemen form biasanya tida memiliki met
 
 #### Playing with browser objects
 
+Mari bermain-main dengan web browser sebentar.
+1. Pertama, buka web browser.
+2. Kemudian, buka <a href="https://developer.mozilla.org/en-US/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools">browser developer tools</a> dan pastikan konsol JS dibuka.
+3. Ketik `guessField` di konsol dan akan tampil elemen `<input>`.
+Contoh pada gambar dibawah:
+<img src="https://drive.google.com/uc?export=view&id=143x0U10g-QBOKcfRur3E3sJqjpDZGVof" loading="lazy" />
+
+4. Sekarang, ketik:
+```javascript
+guessField.value = 2;
+```
 
 
 ---
