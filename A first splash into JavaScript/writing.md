@@ -337,7 +337,26 @@ Kode diatas me-reset seluruh program kita dan memulai dari awal
 
 Loop merupakan konsep perulangan jalannya kode dengan syarat tertentu. Konsep ini merupakan konsep yang sangant penting dalam pemrograman, dengan adanya konsep ini, programmer dapat menjalankan suatu aksi tanpa harus menuliskan kodenya secara berulang yang dimana hal ini kurang efektif dan menguras tenaga dan pikiran bagi programmer.
 
+Berikut contoh kode yang dapat dicoba:
+```javascript
+const fruits = ['apples', 'bananas', 'cherries'];
+for (const fruit of fruits) {
+    console.log(fruit);
+}
+
+/* output:
+apples
+bananas
+cherries
+*/
+```
+
+
 ---
 #### A small discussion on objects
+
+
+
+---
 
 #### Playing with browser objects
