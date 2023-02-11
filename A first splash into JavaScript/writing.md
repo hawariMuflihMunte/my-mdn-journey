@@ -393,6 +393,25 @@ guessField.value = 2;
 ```
 Properti `value` merepresentasikan nilai yang ada di dalam `<input>`. Setelah mengetik kode diatas, kita dapat melihat perubahan yang terjadi di dalam input kita.
 5. Coba ketik `guesses` pada konsol dan tekan `Enter`. Konsol memberitahu kita kalau variabel `guesses` mengandung elemen `<p>` di dalamnya.
+6. coba ketik di konsol
+```javascript
+guesses.value
+```
+
+Konsol akan menampilkan nilai `undefined`, ini terjadi karena paragraf (`<p>`) tidak memiliki properti `value` di dalamnya.
+7. Untuk mengganti teks di dalam paragraf (`<p>`), kamu perlu properti `textContent`. Contoh:
+```javascript
+guesses.textContent = 'Where is my paragraph?';
+```
+8. Sekarang, untuk bersenag-senang. Coba ketikkan kode di bawah ini pada konsol:
+```javascript
+guesses.style.backgroundColor = 'yellow';
+guesses.style.fontSize = '200%';
+guesses.style.padding = '10px';
+guesses.style.boxShadow = '3px 3px 6px black';
+```
+
+Setiap elemen HTML memiliki properti `style`, yang dimana memiliki sebuah object pada dirinya sendiri yang propertinya mengandung CSS inline. Dengan ini, kita dapat memanipulasi desain CSS pada elemen secara dinamis menggunakan JS.
 
 ---
 
