@@ -364,10 +364,19 @@ Dengan menambahkan method `focus()`, user akan langsung diarahkan kepada `<input
 Mari menganalisa apa yang terjadi sebenarnya. Dalam _JavaScript_, sebagian besar item yang dimanipulasi dalam kode mu adalah _object_. _**Object adalah koleksi fungsional yang dirangkap dalam satu kelompok atau grup**_.
 
 Pada kasus game yang dibuat, pertama kita membuat sebuah variabel konstan `guessField` yang menyimpan referensi input teks pada konten HTML -- Dapat dilihat dibawah ini:
+
 ```javascript
 const guessField = document.querySelector('.guessField');
+
 ```
 Untuk mendapatkan referensi ini, kita menggunakan method `querySelector()` dari object `document`. `querySelector()` mengambil informasi yang diperlukan -- seperti sebuah __CSS selector_ yang memilih elemen HTML yang ingin di ambil pada konten HTML.
+
+Karena sekarang `guessField` sudah memiliki referensi `<input>` di dalam konten HTML, sekarang kita mempunyai hak akses dalam manipulasi properti konten ini (biasanya variabel yang terkandung di dalam object, adapula variabel yang nilainya tidak dapat diubah) serta method (biasanya fungsi yang terkandung di dalam object). Salah satu method pada elemen `<input>` adalah `focus()`, sekarang kita dapat lihat bagaimana penggunaan method ini pada kode kita.
+```javascript
+guessField.focus();
+```
+
+Variabel yang tidak memiliki referensi ke elemen form biasanya tida memiliki method `focus()`. Seperti contoh, `guesses` mengandung sebuah referensi ke elemen `<p>` dan `guessCount` mengandung nilai berupa angka.
 
 ---
 
