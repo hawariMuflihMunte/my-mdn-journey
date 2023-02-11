@@ -3,12 +3,14 @@
 <br/>
 
 ### # Thinking like a programmer
+#### Berpikir kritis seperti programmer
 
 Salah satu hal yang sulit untuk dipelajari dalam pemrograman adalah bukan hanya tentang menulis sintaksis kode, akan tetapi, mengaplikasikan kode kita untuk menyelesaikan permasalahan nyata. Oleh karena itu, kamu harus menyelesaikan masalah ini dengan menggunakan logika programmer -- disini kamu dituntut untuk melihat deskripsi permasalahan yang dihadapi dan solusi yang diberikan dari program kita, membuat fitur yang dibutuhkan untuk dapat menyelesaikan masalah, dan bagaimana membuat mereka dapat bekerja dengan baik dan semestinya.
 
 ---
 
 ### # Example - Guess the number game
+#### Contoh - Permainan tebak angka
 
 Berikut tautan contoh program:
 <a href="https://mdn.github.io/learning-area/javascript/introduction-to-js-1/first-splash/number-guessing-game-start.html">Number Guessing Game</a>
@@ -37,6 +39,7 @@ Dari pernyataan diatas, kita harus memecahnya ke dalam bentuk pernyataan yang le
 ---
 
 #### Initial setup
+##### Tahapan awal
 
 Letakkan kode pada tag `<script>` atau jika menulis kode JS secara terpisah, kita dapat memanggil tag `<script>` dengan atribut
 `src` dimana isi dari atribut ini adalah nama file kode JS eksternal.
@@ -45,6 +48,7 @@ Letakkan kode pada tag `<script>` atau jika menulis kode JS secara terpisah, kit
 ---
 
 #### Adding variables to store our data
+#### Menambahkan variabel untuk menyimpan data
 
 Kode di dalam `<script>`
 ```javascript
@@ -86,6 +90,7 @@ dapat dilakukan pengecekan apakah pemain sudah menebak 10 kali atau belum.
 ---
 
 #### Functions
+##### Fungsi
 
 ```javascript
 function checkGuess() {
@@ -103,6 +108,7 @@ Bila halaman menampilkan pesan `I am placeholder`, maka fungsi sudah dapat berja
 ---
 
 #### Operators
+##### Operator
 
 ###### 🎗 Operator Aritmatika
 
@@ -205,6 +211,7 @@ console.log(name);
 ---
 
 #### Conditionals
+##### Percabangan
 
 Tentu saja kita tidak ingin fungsi `checkGuess()` kita hanya menampilkan pesan `I am a placeholder` saja kan.
 Oleh karena itu, kita kita dapat melanjutkan mengisi blok fungsi kita dengan kode berikut
@@ -264,6 +271,7 @@ mengisi angka tebakannya tanpa tertimpa dengan angka tebakan sebelumnya.
 ---
 
 #### Events
+##### Peristiwa
 
 Saat ini, kita sudah mengimplementasikan kode pada blok fungsi `checkGuess()`, namun fungsi ini tidak melakukan apapun dan kita tidak dapat melihat hasil jalannya kode ini dikarenakan kita belum memanggil nya. Idealnya, fungsi `checkGuess()` dijalankan ketika `"Submit guess"` diklik dan untuk melakukan ini kita memerlukan sebuah **event**.
 
@@ -281,6 +289,7 @@ Selanjutnya, pengkodean fungsi `setGameOver()`.
 ---
 
 #### Finishing the game functionality
+##### Menyelesaikan fungsionalitas permainan
 
 ```javascript
 function setGameOver() {
@@ -334,6 +343,7 @@ Kode diatas me-reset seluruh program kita dan memulai dari awal
 ---
 
 #### Loops
+##### Perulangan
 
 Loop merupakan konsep perulangan jalannya kode dengan syarat tertentu. Konsep ini merupakan konsep yang sangant penting dalam pemrograman, dengan adanya konsep ini, programmer dapat menjalankan suatu aksi tanpa harus menuliskan kodenya secara berulang yang dimana hal ini kurang efektif dan menguras tenaga dan pikiran bagi programmer.
 
@@ -354,6 +364,7 @@ cherries
 
 ---
 #### A small discussion on objects
+##### Obrolan kecil tentang object
 
 ```javascript
 guessField.focus();
@@ -381,6 +392,7 @@ Variabel yang tidak memiliki referensi ke elemen form biasanya tida memiliki met
 ---
 
 #### Playing with browser objects
+##### Bermain dengan object browser
 
 Mari bermain-main dengan web browser sebentar.
 1. Pertama, buka web browser.
