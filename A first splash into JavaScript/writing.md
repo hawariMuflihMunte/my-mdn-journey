@@ -361,6 +361,14 @@ guessField.focus();
 
 Dengan menambahkan method `focus()`, user akan langsung diarahkan kepada `<input>` segera setelah halaman selesai memuat konten. Dengan begitu, hal ini dapat meningkatkan _usability_ atau _cara pemakaian_ yang dapat membuat user paham dengan apa yang harus dilakukan dan bagaimana caranya berinteraksi dengan game yang dimainkannya.
 
+Mari menganalisa apa yang terjadi sebenarnya. Dalam _JavaScript_, sebagian besar item yang dimanipulasi dalam kode mu adalah _object_. _**Object adalah koleksi fungsional yang dirangkap dalam satu kelompok atau grup**_.
+
+Pada kasus game yang dibuat, pertama kita membuat sebuah variabel konstan `guessField` yang menyimpan referensi input teks pada konten HTML -- Dapat dilihat dibawah ini:
+```javascript
+const guessField = document.querySelector('.guessField');
+```
+Untuk mendapatkan referensi ini, kita menggunakan method `querySelector()` dari object `document`. `querySelector()` mengambil informasi yang diperlukan -- seperti sebuah __CSS selector_ yang memilih elemen HTML yang ingin di ambil pada konten HTML.
+
 ---
 
 #### Playing with browser objects
