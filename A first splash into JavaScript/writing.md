@@ -381,3 +381,10 @@ Variabel yang tidak memiliki referensi ke elemen form biasanya tida memiliki met
 ---
 
 #### Playing with browser objects
+
+
+
+---
+
+That's all 😄<br/>
+Have a nice day 🏝️<br/><br/>
