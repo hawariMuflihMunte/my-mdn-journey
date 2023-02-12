@@ -6,7 +6,15 @@ serta mempelajari tipe-tipe error yang ada pada JavaScript.
 
 ### # Types of error
 
+Umumnya, ketika ada kesalahan penulisan pada kodemu, ada dua tipe error utama yang akan terjadi:
 
+* Syntax errors: <br/>
+  Terjadi kesalahan ejaan pada kode yang menyebabkan kode error, biasanya apabila error ini terjadi akan muncul pesan error-nya yang menjelaskan error-nya
+  itu sendiri.
+
+* Logic errors: <br/>
+  Error ini merupakan error yang sulit untuk diketahui, karena kode tetap berjalan dengan baik akan tetapi kode tidak memberikan hasil yang sesuai dengan keinginan
+  atau berbeda dari yang diharapkan. Error ini biasanya tidak memiliki pesan error yang dimunculkan.
 
 ---
 
