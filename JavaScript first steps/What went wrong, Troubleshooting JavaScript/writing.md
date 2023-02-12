@@ -1,3 +1,8 @@
+## What went wrong? Troubleshooting JavaScript
+
+Pada materi sebelumnya, kita telah membuat sebuah game sederhana "Guess the number" dan mungkin pada kasus tertentu game ini tidak dapat
+berjalan dengan semestinya -- ada error, atau hal lainya. Tidak perlu takut, pada materi kali ini, akan dibahas cara untuk menangani error
+serta mempelajari tipe-tipe error yang ada pada JavaScript.
 
 ### # Types of error
 
