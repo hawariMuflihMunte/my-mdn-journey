@@ -26,18 +26,11 @@ Dari pernyataan diatas, kita harus memecahnya ke dalam bentuk pernyataan yang le
 2. Batas tebak angka 10 kali. Jadi, kegiatan menebak akan direkam dari 1 dan setiap pemain menebak akan bertambah 1.
 3. Pemain dapat memasukkan angka tebakannya.
 4. Lakukan pengecekan tebakan.
-5. Apabila benar, maka
-1. Tampilkan pesan kemenangan pemain.
-2. Berikan opsi untuk bermain ulang.
-6. Apabila salah, maka
-1. Tampilkan pesan kesalahan, apakah angka yang dimasukkan tinggi atau rendah dari angka yang ditebak.
-2. Masukkan angka lagi
-3. Tambah jumlah rekam tebakan sebanyak 1.
-7. Apabila salah dan pemain sudah menebak sebanyak 10 kali, maka
-1. Tampilkan pesan kekalahan pemain.
-2. Pemain tidak dapat memasukkan angka tebakan lagi.
-3. Berikan opsi untuk bermain ulang.
-8. Jika game di mulai ulang, maka pastikan program untuk me-reset ulang programnya agar dapat dimainkan kembali.
+5. Apabila benar, maka tampilkan pesan kemenangan pemain. Berikan opsi untuk bermain ulang.
+6. Apabila salah, maka tampilkan pesan kesalahan, apakah angka yang dimasukkan tinggi atau rendah dari angka yang ditebak. Masukkan angka lagi.
+7. Tambah jumlah rekam tebakan sebanyak 1.
+8. Apabila salah dan pemain sudah menebak sebanyak 10 kali, maka tampilkan pesan kekalahan pemain. Pemain tidak dapat memasukkan angka tebakan lagi. Berikan opsi untuk bermain ulang.
+9. Jika game di mulai ulang, maka pastikan program untuk me-reset ulang programnya agar dapat dimainkan kembali.
 
 ---
 
