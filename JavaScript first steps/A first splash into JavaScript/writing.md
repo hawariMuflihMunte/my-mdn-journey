@@ -141,7 +141,7 @@ Bila halaman menampilkan pesan `I am placeholder`, maka fungsi sudah dapat berja
         <tr>
             <td><code>*</code></td>
             <td>Multiplication</td>
-<td><code>3* 5</code></td>
+            <td><code>3* 5</code></td>
         </tr>
         <tr>
             <td><code>/</code></td>
