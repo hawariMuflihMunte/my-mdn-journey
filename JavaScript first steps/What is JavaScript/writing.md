@@ -3,6 +3,7 @@
 <br/>
 
 ### # A high-level definition
+
 #### _Definisi level-tinggi_
 
 JavaScript adalah sebuah _bahasa scripting atau pemrograman yang dapat mengimplementasikan fitur-fitur kompleks pada halaman web_ -- _tidak hanya memberikan informasi dalam halaman statis_ -- _menampilkan pembaruan konten terbaru, interaksi, animasi 2D/3D, dan lain-lain_
@@ -17,9 +18,11 @@ JavaScript adalah sebuah _bahasa scripting atau pemrograman yang dapat mengimple
 ---
 
 ### # So what can it really do?
+
 #### _Apa yang dapat dia lakukan?_
 
 Inti dari JavaScript terdiri dari fitur bahasa pemrograman pada umumnya yang dapat digunakan untuk:
+
 * Menyimpan nilai/data ke dalam sebuah variabel.
 * Mengoperasikan teks ("string" dalam bahasa pemrograman).
 * Menjalankan kode sebagai respons dari peristiwa (`event`) yang terjadi pada halaman web.
@@ -32,6 +35,7 @@ Dengan begitu, kita dapat membuat program dari JavaScript dengan memanfaatkan **
 <br/>
 <br/>
 **API** pada JavaScript dapat dibagi ke dalam dua kategori.
+
 1. **Browser API**<br/>
     **API** bawaan pada web browser dan dapat berinteraksi dengan perangkat penggunanya. Contoh:<br/>
     * `DOM (Document Object Model) API` yang dapat digunakan untuk memanipulasi HTML dan CSS, membuat, menghapus, atau mengubah konten HTML, memberikan style baru pada halaman secara dinamis, dan lain sebagainya,
@@ -48,6 +52,7 @@ Dengan begitu, kita dapat membuat program dari JavaScript dengan memanfaatkan **
 ---
 
 ### # What is JavaScript doing on your page?
+
 #### _Apa yang dilakukan JavaScript pada halaman webmu_
 
 Ketika kamu menjalankan sebuah halaman web pada web browser, kamu menjalankannya (HTML, CSS, JS) di dalam sebuah lingkungan eksekusi (tab browser). Ia bekerja layaknya sebuah pabrik yang menerima bahan mentah (disini bisa kita umpamakan dengan kode) dan menampilkan produk hasil olahannya (halaman web).
@@ -61,6 +66,7 @@ Dapat terjadi error apabila JavaScript dijalankan terlebih dahulu dibanding HTML
 ---
 
 #### # Browser security
+
 #### _Keamanan browser_
 
 Masing-masing tab browser memiliki ruang lingkup eksekusi yang berbeda (_lingkungan eksekusi / **execution environments**_) -- Dengan begitu, masing-masing kode dijalankan secara terpisah dan code pada suatu tab tidak dapat mempengaruhi kode pada tab browser lainnya -- atau pada website lainnya. Ini merupakan implementasi keamanan -- jika ini tidak diterapkan, maka bisa dipastikan orang lain (hacker dan sejenisnya) dapat menuliskan kode yang berbahaya dan mulai mencuri informasi-informasi dari website lainnya dan hal-hal yang lainnya yang dapat menguntungkan sepihak saja.
@@ -68,6 +74,7 @@ Masing-masing tab browser memiliki ruang lingkup eksekusi yang berbeda (_lingkun
 ---
 
 #### # JavaScript running order
+
 #### _Urutan eksekusi JavaScript_
 
 ```
@@ -90,6 +97,7 @@ Jika kamu menukar urutan dari dua baris pertama kode diatas, kode tersebut akan 
 --
 
 #### # Interpreted versus compiled code
+
 #### _Kode yang diterjemahkan dengan kode yang dikompilasi_
 
 _Interpret_ (Diterjemahkan) dan _Compiled_ (Dikompilasi). _**Di bahasa pemrograman yang diterjemahkan, code dijalankan dari atas ke bawah dan hasil eksekusi langsung di kembalikan**_. Kode tidak perlu diubah menjadi kode lainnya dan kode ini pun akan berjalan langsung pada lingkungan eksekusinya (disini, kasusnya adalah web browser).
@@ -103,6 +111,7 @@ JavaScript dikompilasikan dengan cepat ke dalam bentuk kode mesin sehingga kode 
 ---
 
 #### # Server-side versus client-side code
+
 #### kode server dengan pengguna
 
 _**Kode pengguna berjalan pada perangkat pengguna**_, sedangkan _**kode server berjalan di server dan data yang ada di server akan diunduh/diambil oleh client (pengguna) dan hasilnya akan ditampilkan di perangkat pengguna**_.
@@ -113,23 +122,26 @@ Adapun bahasa pemrograman yang populer digunakan untuk web server adalah PHP, Py
 ---
 
 #### # Dynamic versus static code
+
 #### Kode dinamis dengan statis
 
 _**Dinamis yang artinya konten dapat berubah sesuai dengan kebutuhan dan informasi yang ada di dalamnya pula dapat diubah dan disesuaikan dengan kebutuhan**_. Contoh:<br/>
+
 * Client-side
-    * Mengubah data atau tampilan pada halaman,
-    * Menambah, menghapus, mengubah data atau tampilan,
-    * dan lain sebagainya.
+  * Mengubah data atau tampilan pada halaman,
+  * Menambah, menghapus, mengubah data atau tampilan,
+  * dan lain sebagainya.
 * Server-side
-    * Mengambil data dari database,
-    * Mengambil data dari 3rd-party API,
-    * dan lain sebagainya.
+  * Mengambil data dari database,
+  * Mengambil data dari 3rd-party API,
+  * dan lain sebagainya.
 
 Sedangkan _**statis hanya menampilkan konten yang sama tanpa ada perubahan sedikit pun**_.
 
 ---
 
 ### # How do you add JavaScript to your page?
+
 #### _Bagaimana caranya untuk menambahkan kode JavaScript ke halaman web?_
 
 #### Internal
@@ -199,11 +211,13 @@ for (const button of buttons) {
     button.addEventListener('click', createParagraph);
 }
 ```
+
 Dengan kode diatas, setiap elemen `<button>` tidak perlu diatur lagi secara manual fungsi `createParagraph()`
 
 <br/>
 
 #### Script loading strategies
+
 #### Strategi memuat kode
 
 Jika kode JavaScript digunakan untuk memanipulasi konten HTML (`Document Object Model`), maka hal ini tidak dapat berlaku apabila kode JavaScript terlebih dahulu dieksekusi daripada kode HTML.
@@ -213,6 +227,7 @@ Salah satu cara JavaScript modern dalam mengatasi hal ini adalah dengan mengguna
 ```
 <script src="script.js" defer></script>
 ```
+
 Pada kode diatas, kode JavaScript dan HTML akan diunduh secara bersamaan dan kode JS akan dieksekusi apabila kode HTML telah selesai diunduh terlebih dahulu.
 
 > **Catatan:**<br/>
