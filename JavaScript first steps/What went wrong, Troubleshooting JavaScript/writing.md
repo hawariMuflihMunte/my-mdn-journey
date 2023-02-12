@@ -1,5 +1,7 @@
 ## What went wrong? Troubleshooting JavaScript
 
+#### Apa yang salah? Memperbaiki JavaScript
+
 Pada materi sebelumnya, kita telah membuat sebuah game sederhana "Guess the number" dan mungkin pada kasus tertentu game ini tidak dapat
 berjalan dengan semestinya -- ada error, atau hal lainya. Tidak perlu takut, pada materi kali ini, akan dibahas cara untuk menangani error
 serta mempelajari tipe-tipe error yang ada pada JavaScript.
@@ -20,11 +22,15 @@ Umumnya, ketika ada kesalahan penulisan pada kodemu, ada dua tipe error utama ya
 
 ### # An erroneous example
 
+#### Contoh error
+
 
 
 ---
 
 ### # Fixing syntax errors
+
+#### Memperbaiki error sintaks
 
 
 
@@ -32,17 +38,22 @@ Umumnya, ketika ada kesalahan penulisan pada kodemu, ada dua tipe error utama ya
 
 #### Syntax errors round two
 
+##### Error sintaks ronde dua
+
 
 
 ---
 
 #### Syntax errors round three
 
+##### Error sintaks ronde tiga
 
 
 ---
 
 ### # A logic error
+
+#### Error logis
 
 
 
@@ -50,12 +61,15 @@ Umumnya, ketika ada kesalahan penulisan pada kodemu, ada dua tipe error utama ya
 
 #### Working through the logic
 
+##### Logika
+
 
 
 ---
 
 ### # Other common errors
 
+#### Error umum lainnya
 
 
 ---
