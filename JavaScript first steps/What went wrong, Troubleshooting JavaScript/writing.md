@@ -62,94 +62,99 @@ Berikut contoh kode dibawah ini.
         We'll tell you if your guess was too high or too low.
       </p>
 
-<div class="form">
-  <label for="guessField">Enter a guess: </label>
-  <input type="text" id="guessField" class="guessField">
-  <input type="submit" value="Submit guess" class="guessSubmit">
-</div>
+  <div class="form">
+    <label for="guessField">Enter a guess: </label>
+    <input type="text" id="guessField" class="guessField">
+    <input type="submit" value="Submit guess" class="guessSubmit">
+  </div>
 
-<div class="resultParas">
-  <p class="guesses"></p>
-  <p class="lastResult"></p>
-  <p class="lowOrHi"></p>
-</div>
+  <div class="resultParas">
+    <p class="guesses"></p>
+    <p class="lastResult"></p>
+    <p class="lowOrHi"></p>
+  </div>
 
-</body>
+  </body>
 
-<script>
-  let randomNumber = Math.floor(Math.random()) + 1;
+  <script>
+    let randomNumber = Math.floor(Math.random()) + 1;
 
-  const guesses = document.querySelector('.guesses');
-  const lastResult = document.querySelector('.lastResult');
-  const lowOrHi = document.querySelector('lowOrHi');
-  const guessSubmit = document.querySelector('.guessSubmit');
-  const guessField = document.querySelector('.guessField');
+    const guesses = document.querySelector('.guesses');
+    const lastResult = document.querySelector('.lastResult');
+    const lowOrHi = document.querySelector('lowOrHi');
+    const guessSubmit = document.querySelector('.guessSubmit');
+    const guessField = document.querySelector('.guessField');
 
-  let guessCount = 1;
-  let resetButton;
+    let guessCount = 1;
+    let resetButton;
 
-  function checkGuess() {
+    function checkGuess() {
 
-    const userGuess = Number(guessField.value);
-    if(guessCount === 1) {
-      guesses.textContent = 'Previous guesses: ';
-    }
-    guesses.textContent += userGuess + ' ';
-
-    if(userGuess === randomNumber) {
-      lastResult.textContent = 'Congratulations! You got it right!';
-      lastResult.style.backgroundColor = 'green';
-      lowOrHi.textContent = '';
-      setGameOver();
-    } else if(guessCount === 10) {
-      lastResult.textContent = '!!!GAME OVER!!!';
-      setGameOver();
-    } else {
-      lastResult.textContent = 'Wrong!';
-      lastResult.style.backgroundColor = 'red';
-      if(userGuess < randomNumber) {
-        lowOrHi.textContent = 'Last guess was too low!';
-      } else if(userGuess > randomNumber) {
-        lowOrHi.textContent = 'Last guess was too high!';
+      const userGuess = Number(guessField.value);
+      if(guessCount === 1) {
+        guesses.textContent = 'Previous guesses: ';
       }
+      guesses.textContent += userGuess + ' ';
+
+      if(userGuess === randomNumber) {
+        lastResult.textContent = 'Congratulations! You got it right!';
+        lastResult.style.backgroundColor = 'green';
+        lowOrHi.textContent = '';
+        setGameOver();
+      } else if(guessCount === 10) {
+        lastResult.textContent = '!!!GAME OVER!!!';
+        setGameOver();
+      } else {
+        lastResult.textContent = 'Wrong!';
+        lastResult.style.backgroundColor = 'red';
+        if(userGuess < randomNumber) {
+          lowOrHi.textContent = 'Last guess was too low!';
+        } else if(userGuess > randomNumber) {
+          lowOrHi.textContent = 'Last guess was too high!';
+        }
+      }
+
+      guessCount++;
+      guessField.value = '';
+      guessField.focus();
+    }
+    guessSubmit.addeventListener('click', checkGuess);
+
+    function setGameOver() {
+      guessField.disabled = true;
+      guessSubmit.disabled = true;
+      resetButton = document.createElement('button');
+      resetButton.textContent = 'Start new game';
+      document.body.appendChild(resetButton);
+      resetButton.addeventListener('click', resetGame);
     }
 
-    guessCount++;
-    guessField.value = '';
-    guessField.focus();
-  }
-  guessSubmit.addeventListener('click', checkGuess);
+    function resetGame() {
+      guessCount = 1;
 
-  function setGameOver() {
-   guessField.disabled = true;
-   guessSubmit.disabled = true;
-   resetButton = document.createElement('button');
-   resetButton.textContent = 'Start new game';
-   document.body.appendChild(resetButton);
-   resetButton.addeventListener('click', resetGame);
-  }
+      const resetParas = document.querySelectorAll('.resultParas p');
+      for (const resetPara of resetParas) {
+        resetPara.textContent = '';
+      }
 
-  function resetGame() {
-   guessCount = 1;
+      resetButton.parentNode.removeChild(resetButton);
 
-    const resetParas = document.querySelectorAll('.resultParas p');
-    for (const resetPara of resetParas) {
-      resetPara.textContent = '';
+      guessField.disabled = false;
+      guessSubmit.disabled = false;
+      guessField.value = '';
+      guessField.focus();
+
+      lastResult.style.backgroundColor = 'white';
+
+      randomNumber = Math.floor(Math.random()) + 1;
     }
-   resetButton.parentNode.removeChild(resetButton);
-
-   guessField.disabled = false;
-   guessSubmit.disabled = false;
-   guessField.value = '';
-   guessField.focus();
-
-   lastResult.style.backgroundColor = 'white';
-
-   randomNumber = Math.floor(Math.random()) + 1;
-  }
-</script>
+  </script>
 </html>
 ```
+
+1. Coba buka text editor dan browser.
+2. Cobalah untuk memainkan game nya --- Pasti kamu akan menjumpai masalah ketika menekan tombol "Submit guess", dimana tombol ini
+tidak berfungsi dengan semestinya.
 
 ---
 
