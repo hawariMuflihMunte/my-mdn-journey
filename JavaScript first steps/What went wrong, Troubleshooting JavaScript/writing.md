@@ -184,6 +184,9 @@ code kita (apabila ada error, maka akan muncul dan akan diberitahu jenis error-n
 Biasanya, error ini terjadi karena kita salah dalam mengeja sesuatu pada kode program kita. Jika tidak yakin terjadi kesalahan pengejaan pada kode kita,
 biasakan untuk selalu mempelajari fitur-fitur JavaScript di MDN. Dengan mengetik "mdn _nama-fitur_" dengan search engine. Berikut contoh tautan-nya <a href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener">addEventListener()</a>.
 
+5. Jadi, dengan melihat referensi diatas, kita dapat mengetahui bahwa kita salah mengeja fungsi yang ingin kita gunakan, yaitu fungsi `addeventListener`.
+Fungsi yang benar adalah `addEventListener`.
+
 ---
 
 #### Syntax errors round two
