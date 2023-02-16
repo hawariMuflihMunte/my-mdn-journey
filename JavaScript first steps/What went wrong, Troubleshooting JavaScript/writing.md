@@ -54,25 +54,25 @@ Berikut contoh kode dibawah ini.
   </head>
 
   <body>
-      <h1>Number guessing game</h1>
+    <h1>Number guessing game</h1>
 
-      <p>
-        We have selected a random number between 1 and 100.
-        See if you can guess it in 10 turns or less.
-        We'll tell you if your guess was too high or too low.
-      </p>
+    <p>
+      We have selected a random number between 1 and 100.
+      See if you can guess it in 10 turns or less.
+      We'll tell you if your guess was too high or too low.
+    </p>
 
-  <div class="form">
-    <label for="guessField">Enter a guess: </label>
-    <input type="text" id="guessField" class="guessField">
-    <input type="submit" value="Submit guess" class="guessSubmit">
-  </div>
+    <div class="form">
+      <label for="guessField">Enter a guess: </label>
+      <input type="text" id="guessField" class="guessField">
+      <input type="submit" value="Submit guess" class="guessSubmit">
+    </div>
 
-  <div class="resultParas">
-    <p class="guesses"></p>
-    <p class="lastResult"></p>
-    <p class="lowOrHi"></p>
-  </div>
+    <div class="resultParas">
+      <p class="guesses"></p>
+      <p class="lastResult"></p>
+      <p class="lowOrHi"></p>
+    </div>
 
   </body>
 
@@ -161,6 +161,27 @@ tidak berfungsi dengan semestinya.
 ### # Fixing syntax errors
 
 #### Memperbaiki error sintaks
+
+Sebelumnya, kita sudah membuka _developer tools JavaScript console_. Dengan menggunakan tools bawaan browser ini, kita dapat debugging
+code kita (apabila ada error, maka akan muncul dan akan diberitahu jenis error-nya).
+
+1. <img src="https://drive.google.com/uc?export=view&id=1Furfhe8BFbkEhXn1xcYPr8jYAACNpfV7p" loading="lazy" />
+2. Error ini masih tergolong mudah untuk dilacak pada konsol, dan browser memberikanmu informasi error-nya.
+
+* sebuah logo "x" berwarna merah yang menandakan adanya error.
+* Sebuah pesan error yang memberitahukan apa yang bermasalah: "TypeError: guessSubmit.addeventListener is not a function".
+* Tautan "Learn More" yang mengarah ke halaman MDN yang menjelaskan error secara rinci.
+* Nama file yang memiliki error pada kode-nya. Jika kita klik ini, maka kita akan diarahkan ke tab `debugger` dan kode yang error akan langsung ditampilkan dengan highlight.
+* Baris kode error, contoh `script.js:43:13`.
+
+3. Kode:
+
+  ```javascript
+  guessSubmit.addeventListener("click", checkGuess);
+  ```
+
+4. Pesan error `guessSubmit.addeventListener is not a function`, yang berarti fungsi yang kita panggil tidak dikenali oleh interpreter JavaScript.
+Biasanya, error ini terjadi karena kita salah dalam mengeja sesuatu pada kode program kita.
 
 ---
 
